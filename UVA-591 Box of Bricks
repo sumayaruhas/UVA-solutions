@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main()
+{
+    ll n , j = 0;
+    while(1)
+    {
+        cin >> n;
+        if(n == 0) break;
+        ll ar[n];
+        ll sum = 0;
+        for(ll i = 0 ; i < n ; i++)
+        {
+            cin >> ar[i];
+            sum += ar[i];
+        }
+        ll k = sum / n;
+        ll sisi = 0;
+        for(ll i = 0 ; i < n ; i++)
+        {
+            if(ar[i] > k)
+            {
+                sisi += (ar[i] - k);
+            }
+        }
+        j++;
+        cout << "Set #" << j << endl;
+        cout << "The minimum number of moves is " << sisi << "." << endl;
+        cout << endl;
+    }
+}
